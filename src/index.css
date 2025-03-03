@@ -2,9 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--text);
+    background-color: var(--background);
 }
 
 :root {
+    --text: #0a0b0a;
+    --background: #f9fbf9;
+    --accent-light: #b1d2ab;
+    --accent-medium: #85c47b;
+    --accent-dark: #79a572;
     font-family: 'InterVariable';
     font-size: 16px;
 }

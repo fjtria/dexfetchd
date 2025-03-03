@@ -1,5 +1,5 @@
 .search-bar {
-    max-width: 250px;
+    max-width: 300px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -9,17 +9,22 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 14px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--text);
     outline: none;
     transition: all 0.3s ease;
 }
 
 .search-results {
-    width: 240px;
+    width: 300px;
+    padding: 0.5rem;
     position: absolute;
     z-index: 100;
     top: 100%;
-    background-color: white;
+    font-size: 14px;
+    border-left: 1px solid var(--text);
+    border-right: 1px solid var(--text);
+    border-bottom: 1px solid var(--text);
+    background-color: var(--background);
 }
 
 .search-results ul {
@@ -28,6 +33,14 @@
     padding: 0;
 }
 
+.search-results li {
+    padding: 0.25rem;
+}
+
 .search-results a {
     text-decoration: none;
+}
+
+.search-results a:hover {
+    text-decoration: underline;
 }
