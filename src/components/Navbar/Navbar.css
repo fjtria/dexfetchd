@@ -1,5 +1,7 @@
 nav {
+    padding: 0.5rem;
     position: fixed;
+    z-index: 99;
     top: 0;
     left: 0;
     right: 0;
@@ -7,6 +9,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+nav h1 {
+    font-family: 'LuckiestGuy';
+    font-size: 2rem;
 }
 
 .search-bar {

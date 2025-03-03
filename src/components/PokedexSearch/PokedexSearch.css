@@ -17,7 +17,9 @@
 .search-results {
     width: 240px;
     position: absolute;
+    z-index: 100;
     top: 100%;
+    background-color: white;
 }
 
 .search-results ul {
