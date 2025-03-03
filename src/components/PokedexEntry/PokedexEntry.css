@@ -1,0 +1,17 @@
+.pokedex-entry {
+    display: flex;
+}
+
+.pokemon-name {
+    display: flex;
+    gap: 2rem;
+    text-transform: capitalize;
+
+}
+
+.pokemon-types {
+    display: flex;
+    gap: 2rem;
+    text-transform: capitalize;
+} 
+
