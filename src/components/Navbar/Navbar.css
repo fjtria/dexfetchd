@@ -7,10 +7,11 @@ nav {
     left: 0;
     right: 0;
     height: 3rem;
+    background-color: var(--accent-medium);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--text);
+    box-shadow: 0 2px 2px var(--accent-dark);
 }
 
 nav h1 {

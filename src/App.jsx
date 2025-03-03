@@ -10,10 +10,14 @@ function App() {
 			<div>
 				<Navbar></Navbar>
 				<main>
-					<Routes>
-						<Route path="/" element={<Home></Home>}></Route>
-						<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
-					</Routes>
+					<div id="star-container">
+						<div id="star-pattern"></div>
+						<div id="star-gradient-overlay"></div>
+						<Routes>
+							<Route path="/" element={<Home></Home>}></Route>
+							<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
+						</Routes>
+					</div>
 				</main>
 			</div>
 		</Router>

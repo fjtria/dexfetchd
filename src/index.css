@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--text);
-    background-color: var(--background);
 }
 
 :root {
@@ -12,6 +11,45 @@
     --accent-light: #b1d2ab;
     --accent-medium: #85c47b;
     --accent-dark: #79a572;
+    background-color: var(--accent-medium);
+
+    --bug-color: #91A119;
+    --bug-color-dark: #5E6910;
+    --dark-color: #624D4E;
+    --dark-color-dark: #403233;
+    --dragon-color: #5060E1;
+    --dragon-color-dark: #343E92;
+    --electric-color: #FAC000;
+    --electric-color-dark: #A37D00;
+    --fairy-color: #EF70EF;
+    --fairy-color-dark: #9B499B;
+    --fighting-color: #FF8000;
+    --fighting-color-dark: #A65300;
+    --fire-color: #E62829;
+    --fire-color-dark: #961A1B;
+    --flying-color: #81B9EF;
+    --flying-color-dark: #54789B;
+    --ghost-color: #704170;
+    --ghost-color-dark: #492A49;
+    --grass-color: #3FA129;
+    --grass-color-dark: #29691B;
+    --ground-color: #915121;
+    --ground-color-dark: #5E3515;
+    --ice-color: #3DCEF3;
+    --ice-color-dark: #28869E;
+    --normal-color: #9FA19F;
+    --normal-color-dark: #676967;
+    --poison-color: #9141CB;
+    --poison-color-dark: #5E2A84;
+    --psychic-color: #EF4179;
+    --psychic-color-dark: #9B2A4F;
+    --rock-color: #AFA981;
+    --rock-color-dark: #726E54;
+    --steel-color: #60A1B8;
+    --steel-color-dark: #3E6978;
+    --water-color: #2980EF;
+    --water-color-dark: #1B539B;
+
     font-family: 'InterVariable';
     font-size: 16px;
 }
@@ -47,3 +85,49 @@ a, a:visited {
     font-display: swap;
     src: url("./assets/fonts/InterVariable-Italic.woff2") format("woff2");
 }
+
+/* Background Animation: https://codepen.io/Hyperplexed/pen/zYXZoZg?ref=Hyperplexed */
+#star-container {
+    padding: 8rem;
+    background: radial-gradient(var(--accent-light), var(--accent-dark));
+    height: 100%;  
+    overflow: hidden;
+    position: relative;
+}
+  
+#star-pattern {
+    background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+    background-size: 10%;  
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    translate: -50% 0%;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    opacity: 0.10;
+    animation: pan 180s linear infinite;
+    will-change: background-position;
+}
+  
+#star-gradient-overlay {
+    background: radial-gradient(circle, transparent 75%, (var(--accent-dark)));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+  }

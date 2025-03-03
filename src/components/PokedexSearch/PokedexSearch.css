@@ -9,9 +9,13 @@
     width: 100%;
     padding: 0.5rem;
     font-size: 14px;
-    border: 1px solid var(--text);
+    border: 2px solid var(--accent-medium);
     outline: none;
     transition: all 0.3s ease;
+}
+
+.search-bar-input:focus {
+    border: 2px solid var(--accent-dark);
 }
 
 .search-results {
@@ -21,9 +25,9 @@
     z-index: 100;
     top: 100%;
     font-size: 14px;
-    border-left: 1px solid var(--text);
-    border-right: 1px solid var(--text);
-    border-bottom: 1px solid var(--text);
+    border-left: 2px solid var(--accent-dark);
+    border-right: 2px solid var(--accent-dark);
+    border-bottom: 2px solid var(--accent-dark);
     background-color: var(--background);
 }
 
