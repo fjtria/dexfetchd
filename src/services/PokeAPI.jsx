@@ -2,10 +2,10 @@ const API_BASE = 'https://pokeapi.co/api/v2';
 
 // Cache for basic Pokémon list
 let PokedexCache = null;
-const PokedexEntryCache = {};
+let PokedexEntryCache = {};
 
 export async function getPokemonList() {
-    const response = await fetch(`${API_BASE}/pokemon?limit=1000`);
+    const response = await fetch(`${API_BASE}/pokemon?limit=1025`);
     const data = await response.json();
     PokedexCache = data.results.map(p => p.name);
     return PokedexCache;
