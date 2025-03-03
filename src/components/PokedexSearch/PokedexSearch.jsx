@@ -37,17 +37,19 @@ export default function PokedexSearch() {
                 onChange={(e) => handleSearch(e.target.value)}
             />
             
-            <div>
-                <ul>
-                    {results.map((name) => (
-                        <li>
-                            <Link key={name} to={`/pokemon/${name}`}>
-                                {name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+            {results.length > 0 && (
+                <div className='search-results'>
+                    <ul>
+                        {results.map((name) => (
+                            <li key={name}>
+                                <Link to={`/pokemon/${name}`}>
+                                    {name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 }

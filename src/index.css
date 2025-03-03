@@ -1,5 +1,47 @@
-:root {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    font-family: 'InterVariable';
+    font-size: 16px;
+}
+
+main {
+    margin-top: 3rem;
+}
+
+h1 {
+    font-family: 'LuckiestGuy';
+    font-size: 2rem;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: LuckiestGuy;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/LuckiestGuy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("./assets/fonts/InterVariable.woff2") format("woff2");
+}
+  
+@font-face {
+    font-family: InterVariable;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("./assets/fonts/InterVariable-Italic.woff2") format("woff2");
 }

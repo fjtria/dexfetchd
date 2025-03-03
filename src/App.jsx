@@ -11,8 +11,8 @@ function App() {
 				<Navbar></Navbar>
 				<main>
 					<Routes>
-						<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
 						<Route path="/" element={<Home></Home>}></Route>
+						<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
 					</Routes>
 				</main>
 			</div>

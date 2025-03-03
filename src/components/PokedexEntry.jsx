@@ -15,7 +15,7 @@ export default function PokedexEntry() {
 
   return (
     <div className="detail-view">
-        <h1>{details.name}</h1>
+        <h2>{details.name}</h2>
         <img 
             src={details.sprites.other['official-artwork'].front_default} 
             alt={details.name}
