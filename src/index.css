@@ -11,7 +11,6 @@
     --accent-light: #b1d2ab;
     --accent-medium: #85c47b;
     --accent-dark: #79a572;
-    background-color: var(--accent-medium);
 
     --bug-color: #91A119;
     --bug-color-dark: #5E6910;
@@ -50,6 +49,7 @@
     --water-color: #2980EF;
     --water-color-dark: #1B539B;
 
+    background-color: var(--accent-medium);
     font-family: 'InterVariable';
     font-size: 16px;
 }
@@ -88,11 +88,29 @@ a, a:visited {
 
 /* Background Animation: https://codepen.io/Hyperplexed/pen/zYXZoZg?ref=Hyperplexed */
 #star-container {
-    padding: 8rem;
+    padding: 4rem 1rem;
     background: radial-gradient(var(--accent-light), var(--accent-dark));
     height: 100%;  
     overflow: hidden;
     position: relative;
+}
+
+@media screen and (min-width: 576px) {
+    #star-container {
+        padding: 4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #star-container {
+        padding: 4rem 8rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #star-container {
+        padding: 4rem 16rem;
+    }
 }
   
 #star-pattern {
@@ -107,7 +125,7 @@ a, a:visited {
     width: 100%;
     min-width: 1200px;
     opacity: 0.10;
-    animation: pan 180s linear infinite;
+    animation: pan 240s linear infinite;
     will-change: background-position;
 }
   

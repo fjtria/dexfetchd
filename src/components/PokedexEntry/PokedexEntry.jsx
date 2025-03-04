@@ -15,10 +15,11 @@ export default function PokedexEntry() {
   if (!details) return <div>Loading...</div>;
 
   return (
-    <div className="pokedex-entry">
+    <div id="pokedex-entry">
       <img 
-          src={details.sprites.other['official-artwork'].front_default} 
-          alt={details.name}
+        className='pokemon-artwork'
+        src={details.sprites.other['official-artwork'].front_default} 
+        alt={details.name}
       />
 
       <div>
@@ -28,9 +29,13 @@ export default function PokedexEntry() {
         </div>
 
         <div className='pokemon-types'>
+          Type:
           {details.types.map((type) => (
-            <p key={type.type.name}>
-                {type.type.name}
+            <p
+              className={`type-card ${type.type.name}-type`}
+              key={type.type.name}
+            >
+              {type.type.name}
             </p>
           ))}
         </div>
