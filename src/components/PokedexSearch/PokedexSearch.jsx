@@ -1,3 +1,8 @@
+/**
+ * PokedexSearch.jsx
+ * Searchable Pokémon list with autocomplete
+ */
+
 import '../../index.css';
 import './PokedexSearch.css';
 import { useState, useEffect } from 'react';
@@ -5,30 +10,32 @@ import { Link } from 'react-router-dom';
 import { getPokemonList } from '../../services/PokeAPI';
 
 export default function PokedexSearch() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [allNames, setAllNames] = useState([]);
-    const [results, setResults] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');   // current text input
+    const [allPokemon, setAllPokemon] = useState([]);   // list of pokemon
+    const [results, setResults] = useState([]);         // list of pokemon filtered by search result
 
-    // Load all Pokémon names on component mount
+    // get all pokemon on load
     useEffect(() => {
-        getPokemonList().then(names => setAllNames(names));
+        getPokemonList().then(list => setAllPokemon(list));
     }, []);
 
-    // Handle search input
+    // updates search results based on search term
     const handleSearch = (term) => {
         setSearchTerm(term);
         if (term.length > 0) {
-        const filtered = allNames.filter(name => 
-            name.includes(term.toLowerCase())
-        );
-        setResults(filtered.slice(0, 10)); // Show top 10 results
+            const filtered = allPokemon.filter(p => 
+                p.name.includes(term.toLowerCase())
+            );
+            setResults(filtered.slice(0, 10));
         } else {
-        setResults([]);
+            setResults([]);
         }
     };
 
     return (
         <div className='search-bar'>
+
+            {/* search bar */}
             <input
                 className="search-bar-input"
                 type="text"
@@ -36,14 +43,15 @@ export default function PokedexSearch() {
                 value={searchTerm}
                 onChange={(e) => handleSearch(e.target.value)}
             />
-            
+
+            {/* search results */}
             {results.length > 0 && (
                 <div className='search-results'>
                     <ul>
-                        {results.map((name) => (
-                            <li key={name}>
-                                <Link to={`/pokemon/${name}`}>
-                                    {name}
+                        {results.map((pokemon) => (
+                            <li key={pokemon.name}>
+                                <Link to={`/pokemon/${pokemon.id}`}>
+                                    {pokemon.name} ({pokemon.speciesId})
                                 </Link>
                             </li>
                         ))}

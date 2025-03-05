@@ -1,3 +1,8 @@
+/**
+ * Navbar.jsx
+ * Simple top navbar
+ */
+
 import '../../index.css';
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
