@@ -1,5 +1,4 @@
 nav {
-    margin-top: 0.25rem;
     padding: 0.5rem;
     position: fixed;
     z-index: 99;
@@ -15,6 +14,7 @@ nav {
 }
 
 nav h1 {
+    padding-top: 0.5rem;
     font-family: 'LuckiestGuy';
     font-size: 2rem;
 }

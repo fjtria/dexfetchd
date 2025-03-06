@@ -1,8 +1,14 @@
 .search-bar {
-    max-width: 300px;
+    max-width: 200px;
     position: relative;
     display: flex;
     justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .search-bar {
+        max-width: 300px;
+    } 
 }
 
 .search-bar-input {
@@ -19,7 +25,7 @@
 }
 
 .search-results {
-    width: 300px;
+    width: 200px;
     padding: 0.5rem;
     position: absolute;
     z-index: 100;
@@ -29,6 +35,12 @@
     border-right: 2px solid var(--accent-dark);
     border-bottom: 2px solid var(--accent-dark);
     background-color: var(--background);
+}
+
+@media screen and (min-width: 768px) {
+    .search-results {
+        width: 300px;
+    }
 }
 
 .search-results ul {

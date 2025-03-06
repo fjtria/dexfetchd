@@ -73,21 +73,24 @@ export default function PokedexEntry() {
 						</div>
 					</div>
 
-					<div className="pokemon-stats">
+					<div className="stats-section">
 						<h2>Stats:</h2>
-						<div className='stat-names'>
-							{details.stats.map((stat) => (
-								<p key={stat.stat.name}>
-									{stat.stat.name}
-								</p>
-							))}
-						</div>
-						<div className='stat-values'>
-							{details.stats.map((stat) => (
-								<p key={stat.stat.name}>
-									{stat.base_stat}
-								</p>
-							))}
+						<div className='pokemon-stats'>
+							<div className='stat-names'>
+								<p>HP</p>
+								<p>Attack</p>
+								<p>Defense</p>
+								<p>Sp. Atk</p>
+								<p>Sp. Def</p>
+								<p>Speed</p>
+							</div>
+							<div className='stat-values'>
+								{details.stats.map((stat) => (
+									<p key={stat.stat.name}>
+										{stat.base_stat}
+									</p>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>

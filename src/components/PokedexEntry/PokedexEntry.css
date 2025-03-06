@@ -1,6 +1,9 @@
 #pokedex-entry {
     padding: 2rem;
     background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     border: 2px solid var(--accent-dark);
     border-radius: 0.5rem;
 }
@@ -31,7 +34,12 @@
     grid-template-columns: 1fr 2fr;
 }
 
+#pokedex-entry .data-text p {
+    margin-bottom: 1rem;
+}
+
 #pokedex-entry h1 {
+    margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -72,10 +80,27 @@
     text-transform: capitalize;
 }
 
-#pokedex-entry .pokemon-stats {
+#pokedex-entry .stats-section {
     display: flex;
-    gap: 8rem;
+    flex-direction: column;
+    gap: 1rem
+}
+
+@media screen and (min-width: 768px) {
+    #pokedex-entry .stats-section {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+#pokedex-entry .pokemon-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
     text-transform: capitalize;
+}
+
+#pokedex-entry .pokemon-stats p {
+    margin-bottom: 1rem;
 }
 
 #pokedex-entry .bug-type {
