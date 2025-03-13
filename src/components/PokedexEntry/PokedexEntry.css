@@ -94,13 +94,44 @@
 }
 
 #pokedex-entry .pokemon-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;    
+    display: flex;
+    gap: 1rem;
     text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+    #pokedex-entry .pokemon-stats {
+        gap: 4rem;
+    }
 }
 
 #pokedex-entry .pokemon-stats p {
     margin-bottom: 1rem;
+}
+
+#pokedex-entry .stat-values {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    #pokedex-entry .stat-values {
+        gap: 4rem;
+    }
+}
+
+#pokedex-entry .stat-bar-container {
+    overflow: hidden;
+    width: 255px;
+    height: 1.5rem;
+    border: 2px solid var(--text);
+    border-radius: 0.5rem;
+}
+
+#pokedex-entry .stat-bar-filled {
+    height: 100%;
+    background-color: var(--accent-dark);
 }
 
 #pokedex-entry .bug-type {

@@ -66,7 +66,7 @@ export default function PokedexEntry() {
 							<div className='pokemon-abilities'>
 								{details.abilities.map((ability) => (
 									<p key={ability.ability.name}>
-										{ability.ability.name}
+										{ability.ability.name.replace(/-/g, ' ')}
 									</p>
 								))}
 							</div>
@@ -78,17 +78,26 @@ export default function PokedexEntry() {
 						<div className='pokemon-stats'>
 							<div className='stat-names'>
 								<p>HP</p>
-								<p>Attack</p>
-								<p>Defense</p>
-								<p>Sp. Atk</p>
-								<p>Sp. Def</p>
-								<p>Speed</p>
+								<p>Atk</p>
+								<p>Def</p>
+								<p>SpA</p>
+								<p>SpD</p>
+								<p>Spe</p>
 							</div>
-							<div className='stat-values'>
+							<div>
 								{details.stats.map((stat) => (
-									<p key={stat.stat.name}>
-										{stat.base_stat}
-									</p>
+									<div key={stat.stat.name} className='stat-values'>
+										<p>
+											{stat.base_stat}
+										</p>
+										<div className='stat-bar-container'>
+											<div 
+												className='stat-bar-filled'
+												style={{ width: `${stat.base_stat}px` }}
+											>
+											</div>
+										</div>
+									</div>
 								))}
 							</div>
 						</div>

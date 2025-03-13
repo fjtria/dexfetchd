@@ -4,16 +4,19 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3rem;
+    height: 3.5rem;
     background-color: var(--accent-medium);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 2px var(--accent-dark) inset;
+    box-shadow: 0 1px 1px var(--accent-dark) inset;
 }
 
 footer p, footer a {
+    font-size: 0.875rem;
     font-weight: 300;
+    text-align: center;
     color: var(--background);
 }
 
