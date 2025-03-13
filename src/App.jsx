@@ -16,8 +16,8 @@ function App() {
 						<div id="star-gradient-overlay"></div>
 						<div className='routes-container'>
 							<Routes>
-								<Route path="/" element={<Home></Home>}></Route>
-								<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
+								<Route path="/dexfetchd" element={<Home></Home>}></Route>
+								<Route path="/dexfetchd/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
 							</Routes>
 						</div>
 					</div>
