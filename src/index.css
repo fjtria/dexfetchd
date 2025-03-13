@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--text);
+    color: var(--black);
 }
 
 :root {
-    --text: #0a0b0a;
-    --background: #f9fbf9;
-    --accent-light: #b1d2ab;
-    --accent-medium: #85c47b;
-    --accent-dark: #79a572;
+    --white: #ebedeb;
+    --black: #0a0c0a;
+    --accent-light: #acc2ac;
+    --accent-medium: #63a462;
+    --accent-dark: #3e5d3d;
 
     --bug-color: #91A119;
     --bug-color-dark: #5E6910;
@@ -49,7 +49,7 @@
     --water-color: #2980EF;
     --water-color-dark: #1B539B;
 
-    background-color: var(--accent-medium);
+    background-color: var(--black);
     font-family: 'InterVariable';
     font-size: 16px;
 }
@@ -60,6 +60,11 @@ main {
 
 a, a:visited {
     text-decoration: none;
+}
+
+.routes-container {
+    position: relative;
+    z-index: 1;
 }
 
 @font-face {
@@ -88,11 +93,11 @@ a, a:visited {
 
 /* Background Animation: https://codepen.io/Hyperplexed/pen/zYXZoZg?ref=Hyperplexed */
 #star-container {
-    padding: 4rem 1rem;
-    background: radial-gradient(var(--accent-light), var(--accent-dark));
-    height: 100%;  
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    padding: 4rem 1rem;
+    height: 100%;  
+    background-color: var(--black);
 }
 
 @media screen and (min-width: 768px) {
@@ -108,13 +113,13 @@ a, a:visited {
 }
   
 #star-pattern {
+    z-index: 0;
     background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
     background-size: 10%;  
     position: absolute;
     left: 50%;
     top: 0px;
     translate: -50% 0%;
-    z-index: 1;
     height: 100%;
     width: 100%;
     min-width: 1200px;
@@ -124,14 +129,13 @@ a, a:visited {
 }
   
 #star-gradient-overlay {
-    background: radial-gradient(circle, transparent 75%, (var(--accent-dark)));
+    z-index: 0;
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
     opacity: 0.9;
-    z-index: 2;
 }
 
 @keyframes pan {

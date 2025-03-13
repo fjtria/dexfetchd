@@ -14,13 +14,15 @@ function App() {
 					<div id="star-container">
 						<div id="star-pattern"></div>
 						<div id="star-gradient-overlay"></div>
-						<Routes>
-							<Route path="/" element={<Home></Home>}></Route>
-							<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
-						</Routes>
+						<div className='routes-container'>
+							<Routes>
+								<Route path="/" element={<Home></Home>}></Route>
+								<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
+							</Routes>
+						</div>
 					</div>
-					<Footer></Footer>
 				</main>
+				<Footer></Footer>
 			</div>
 		</Router>
 	);

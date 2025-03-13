@@ -76,7 +76,7 @@ export default function PokedexEntry() {
 					<div className="stats-section">
 						<h2>Stats:</h2>
 						<div className='pokemon-stats'>
-							<div className='stat-names'>
+							<div>
 								<p>HP</p>
 								<p>Atk</p>
 								<p>Def</p>

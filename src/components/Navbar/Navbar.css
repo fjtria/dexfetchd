@@ -6,17 +6,18 @@ nav {
     left: 0;
     right: 0;
     height: 3rem;
-    background-color: var(--accent-medium);
+    background-color: var(--accent-dark);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 1px var(--accent-dark);
 }
 
 nav h1 {
     padding-top: 0.5rem;
+    color: var(--white);
     font-family: 'LuckiestGuy';
     font-size: 2rem;
+    font-weight: 400;
 }
 
 .search-bar {

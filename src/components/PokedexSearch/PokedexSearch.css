@@ -20,10 +20,6 @@
     transition: all 0.3s ease;
 }
 
-.search-bar-input:focus {
-    border: 2px solid var(--accent-dark);
-}
-
 .search-results {
     width: 200px;
     padding: 0.5rem;
@@ -31,10 +27,10 @@
     z-index: 100;
     top: 100%;
     font-size: 14px;
-    border-left: 2px solid var(--accent-dark);
-    border-right: 2px solid var(--accent-dark);
-    border-bottom: 2px solid var(--accent-dark);
-    background-color: var(--background);
+    border-left: 2px solid var(--accent-medium);
+    border-right: 2px solid var(--accent-medium);
+    border-bottom: 2px solid var(--accent-medium);
+    background-color: var(--white);
 }
 
 @media screen and (min-width: 768px) {
