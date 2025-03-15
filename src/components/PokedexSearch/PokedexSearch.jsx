@@ -74,7 +74,7 @@ export default function PokedexSearch() {
                                 onMouseDown={(e) => e.preventDefault()}
                             >
                                 <Link to={`/dexfetchd/pokemon/${pokemon.id}`}>
-                                    {pokemon.name} ({pokemon.speciesId})
+                                    {pokemon.name}
                                 </Link>
                             </li>
                         ))}

@@ -27,6 +27,7 @@
     z-index: 100;
     top: 100%;
     font-size: 14px;
+    text-transform: capitalize;
     border-left: 2px solid var(--accent-medium);
     border-right: 2px solid var(--accent-medium);
     border-bottom: 2px solid var(--accent-medium);
