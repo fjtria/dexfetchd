@@ -135,7 +135,6 @@ a, a:visited {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, transparent 75%, var(--black));
     opacity: 0.9;
 }
 

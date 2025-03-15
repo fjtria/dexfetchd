@@ -2,7 +2,7 @@
   "name": "dexfetchd",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://fjtria.github.io/dexfetchd/",
+  "homepage": "https://fjtria.github.io/dexfetchd",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
