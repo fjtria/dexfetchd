@@ -25,12 +25,13 @@ export default function Home() {
       <div className='news'>
         <h2>Latest Updates:</h2>
         <p>Posts from the Pokémon News feed.</p>
-        <bsky-embed
-          feed="at://did:plc:gxykmpc7s5vwf7sjdodyxwb2/app.bsky.feed.generator/aaai4pabezfq4"
-          limit="5"
-          link-target="_blank"
-        >
-        </bsky-embed>
+        <div className='news-feed'>
+          <bsky-embed
+            feed="at://did:plc:gxykmpc7s5vwf7sjdodyxwb2/app.bsky.feed.generator/aaai4pabezfq4"
+            link-target="_blank"
+          >
+          </bsky-embed>
+        </div>
       </div>
     </div>
   );
