@@ -1,5 +1,5 @@
 #home {
-    padding: 2rem;
+    padding: 2rem 1rem;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
