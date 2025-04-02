@@ -48,6 +48,12 @@
     gap: 1rem;
 }
 
-#home .news-feed {
-    width: 80%;
+.news-feed {
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px){
+    .news-feed {
+        width: 80%;
+    }
 }
