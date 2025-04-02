@@ -1,5 +1,5 @@
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import PokedexEntry from './components/PokedexEntry/PokedexEntry';
@@ -16,8 +16,8 @@ function App() {
 						<div id="star-gradient-overlay"></div>
 						<div className='routes-container'>
 							<Routes>
-								<Route path="/dexfetchd" element={<Home></Home>}></Route>
-								<Route path="/dexfetchd/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
+								<Route path="/" element={<Home></Home>}></Route>
+								<Route path="/pokemon/:id" element={<PokedexEntry></PokedexEntry>}></Route>
 							</Routes>
 						</div>
 					</div>
